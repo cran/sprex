@@ -1,9 +1,10 @@
 #' @title Bootstrap Assemblage of Species
 #' @description Create bootstrap assemblage of species.
 #' 
-#' @param f a vector of species frequencies where \code{f[i]} is the number of species
-#'   represented by only \code{i} samples.
-#' @param f0.func function calculating the unobserved number of species (\code{f0}).
+#' @param f a vector of species frequencies where \code{f[i]} is the number of 
+#'   species represented by only \code{i} samples.
+#' @param f0.func function calculating the unobserved number of 
+#'   species (\code{f0}).
 #' @param n.boot number of bootstrap replicates.
 #' @param ... other arguments to \code{f0.func}.
 #' 
@@ -17,7 +18,8 @@
 #'   diversity studies. Ecological Monographs 84(1):45-67.
 #'   
 #' @export
-bootstrap.assemblage <- function(f, f0.func = Chao1, n.boot = 500, ...) {
+
+bootstrap.assemblage <- function(f, f0.func, n.boot = 500, ...) {
   if(length(f) == 1) f <- c(f, 0)
   f0.est <- f0.func(f, ...)
   n <- unname(f0.est["n"])

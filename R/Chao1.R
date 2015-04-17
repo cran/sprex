@@ -1,6 +1,7 @@
 #' @rdname f0
 #' 
 #' @export
+
 Chao1 <- function(f) {
   x <- f.stats(f)
   s.obs <- unname(x["s.obs"])
@@ -15,5 +16,7 @@ Chao1 <- function(f) {
   }
   f0 <- f0 * (x["n"] - 1) / x["n"]
   
-  c(s.est = unname(f0 + s.obs), f0 = unname(f0), x)
+  x <- c(s.est = unname(f0 + s.obs), f0 = unname(f0), x)
+  x[is.nan(x)] <- NA
+  x
 }

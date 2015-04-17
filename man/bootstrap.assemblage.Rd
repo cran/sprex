@@ -4,13 +4,14 @@
 \alias{bootstrap.assemblage}
 \title{Bootstrap Assemblage of Species}
 \usage{
-bootstrap.assemblage(f, f0.func = Chao1, n.boot = 500, ...)
+bootstrap.assemblage(f, f0.func, n.boot = 500, ...)
 }
 \arguments{
-\item{f}{a vector of species frequencies where \code{f[i]} is the number of species
-represented by only \code{i} samples.}
+\item{f}{a vector of species frequencies where \code{f[i]} is the number of
+species represented by only \code{i} samples.}
 
-\item{f0.func}{function calculating the unobserved number of species (\code{f0}).}
+\item{f0.func}{function calculating the unobserved number of
+species (\code{f0}).}
 
 \item{n.boot}{number of bootstrap replicates.}
 
