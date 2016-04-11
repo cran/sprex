@@ -1,5 +1,4 @@
 #' @name f0
-#' 
 #' @title Number of Unobserved Species
 #' @description Calculate the number of unobserved species (f0).
 #' 
@@ -26,8 +25,10 @@
 #'   species richness and shared species richness under sampling without 
 #'   replacement. Biometrics 68:912-921. \cr\cr
 #'   \code{iChao1}: Chiu, C-H, Wang, Y-T, Walther, BA, and A Chao. 2014. 
-#'   An improved nonparametric lower bound of species richness via a 
-#'   modified Good-Turing frequency formula. Biometrics 70(3):671-682.
+#'   An impro.ved nonparametric lower bound of species richness via a 
+#'   modified Good-Turing frequency formula. Biometrics 70(3):671-682. \cr\cr
+#'   \code{clench}: Clench, H. 1979. How to make regional lists of butterflies: 
+#'   Some thoughts. Journal of the Lepidopterists' Society 33(4):216-231
 #'   
 #' @examples
 #' data(osa.second.growth)
@@ -39,6 +40,7 @@
 #' jack2.est <- jack2(f)
 #' swor1.est <- Swor1(f, 20000)
 #' ichao1.est <- iChao1(f)
+#' clench.est <- Clench(f, num.reps = 50)
 #' 
 #' f0.est <- cbind(
 #'   ACE = ace.est["f0"],
@@ -46,7 +48,11 @@
 #'   jack1 = jack1.est["f0"],
 #'   jack2 = jack2.est["f0"],
 #'   Swor1 = swor1.est["f0"],
-#'   iChao1 = ichao1.est["f0"]
+#'   iChao1 = ichao1.est["f0"],
+#'   clench = clench.est["f0"]
 #' )
 #' f0.est
+#' 
+#' @aliases f0
+#' 
 NULL

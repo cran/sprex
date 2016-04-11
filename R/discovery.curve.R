@@ -7,9 +7,7 @@
 #'   Defaults to the sample size of \code{f}.
 #' @param n.pts number of points between 0 and \code{max.x} to estimate.
 #' @param ci size of the confidence interval (0.5:1).
-#' @param f0.func function to use to calculate f0. Can be \code{\link{Chao1}},
-#'   \code{\link{ACE}}, \code{\link{jack1}}, \code{\link{jack2}}, 
-#'   \code{\link{iChao1}}, or \code{\link{Swor1}}.
+#' @param f0.func function to use to calculate \code{\link{f0}}.
 #' @param ... other arguments to \code{f0.func}.
 #' 
 #' @return a list with:
@@ -39,8 +37,9 @@
 #' d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
 #' plot(d)
 #' 
+#' @importFrom stats qnorm
 #' @export
-
+#' 
 discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)), 
                             n.pts = 100, ci = 0.95, ...) {
   n <- sum(f * 1:length(f))
@@ -55,6 +54,7 @@ discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)),
     cbind(s.ind[, "sd.s.ind"], -s.ind[, "sd.s.ind"])
   ci.poly <- cbind(x = c(n.seq, rev(n.seq)), 
                    y = c(s.ind.ci[, 1], rev(s.ind.ci[, 2])))
+  ci.poly[, "y"] <- ifelse(ci.poly[, "y"] < 1, 1, ci.poly[, "y"])
   i <- which(s.ind[, "m"] <= f.stats["n"])
   rarefact.line <- cbind(x = s.ind[i, "m"], y = s.ind[i, "s.ind"])
   extrap.line <- cbind(x = s.ind[-i, "m"], y = s.ind[-i, "s.ind"])
