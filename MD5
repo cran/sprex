@@ -1,4 +1,4 @@
-eb3d185ffb45755de6b17d3392283ca2 *DESCRIPTION
+35292edf6b4c1fd8d6a80417dc9e04db *DESCRIPTION
 c4a7ac96ba10ae2e8e97ecf8a8eecab2 *NAMESPACE
 239f86eb353b943b9d0ee41de80875b8 *R/ACE.R
 6dff79bc3f3b648e744b09330702785e *R/Chao1.R
@@ -15,7 +15,7 @@ b91a50cd7df477ab536065c048009bf1 *R/jack.R
 ef7c0845b9751b8622c1f027054f59b4 *R/num.samples.required.R
 7d05e7a1fede57ed369ddd6c30606d17 *R/plot.discovery.curve.R
 74d8471dc42f0cfdc798ada5d1729dba *R/rarefaction.overlap.R
-31d8411b1651c481a4f2aa9138b8363b *R/sample.to.species.freq.R
+675e7cf540b084d79ddbdce7bf391319 *R/sample.to.species.freq.R
 aad4644ac454972aeb7336c0abbd6aae *R/species.to.sample.freq.R
 0e9200755f1143a0dcb34306c97bc2a6 *R/sprex-package.R
 a9e09e774d629c6bb4958688c11682c3 *README.md
@@ -31,6 +31,6 @@ fad2297eb0f52e78c236d72725fe7f38 *man/num.samples.required.Rd
 701f21c40c203c2e37dbf6d8b9edede9 *man/osa.old.growth.Rd
 9fa7be4de4df3490c519ccc556b4015d *man/plot.discovery.curve.Rd
 073289b91e8f17915a30a5313f43ef87 *man/rarefaction.overlap.Rd
-10e3d1ba9fca4571e0752ab3837e4a77 *man/sample.to.species.freq.Rd
+494d14db5596b35cff3914ee1180b8a4 *man/sample.to.species.freq.Rd
 f356ac90bd58d565163a2a319c1a3435 *man/species.to.sample.freq.Rd
 cde8d70131302960be7b3e3bf89711b7 *man/sprex-package.Rd
